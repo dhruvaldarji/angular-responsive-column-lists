@@ -1,0 +1,11 @@
+<div
+  class="wrapper"
+  [ngClass]="columnType"
+  >
+  <ul class="wrapper-list"> 
+    <li class="wrapper-item" *ngFor="let item of list">
+      <app-item [item]="item"></app-item>
+    </li>
+    <li class="wrapper-item wrapper-item--spacer"></li>
+  </ul>
+</div>

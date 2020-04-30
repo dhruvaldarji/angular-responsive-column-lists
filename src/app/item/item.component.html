@@ -1,0 +1,10 @@
+<a 
+  class="item-anchor" 
+  routerLinkActive="item-anchor--active"
+  [routerLink]="['/', item?.id]"
+  >
+  <ng-container *ngIf="item">
+    <span class="item-badge">{{ item?.id }}</span>
+    <span class="item-text">{{ item?.name }}</span>
+  </ng-container>
+</a>
