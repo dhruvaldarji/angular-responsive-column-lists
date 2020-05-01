@@ -1,7 +1,7 @@
 .wrapper {
   background: #2C3643;
-  max-width: 74rem;
-  padding-right: 1rem;
+  max-width: 73rem;
+  padding-right: 2rem;
   overflow-y: auto;
   height: 100%;
   width: 100%;
@@ -36,7 +36,7 @@
       width: 100%;
 
       @media(min-width: 760px) {
-        width: 37rem;
+        width: 36rem;
       }
 
       -webkit-column-break-inside: avoid; /* Chrome, Safari, Opera */
@@ -59,7 +59,7 @@
       flex: 0 0 100%;
 
       @media(min-width: 760px) {
-        flex: 0 0 37rem;
+        flex: 0 0 36rem;
         &:nth-child(odd) {
           margin-right: -1px;
           border-right: solid 1px #696969;
@@ -83,7 +83,7 @@
       width: 100%;
 
       @media(min-width: 760px) {
-        width: 37rem;
+        width: 36rem;
       }
 
       @media(min-width: 760px) {
