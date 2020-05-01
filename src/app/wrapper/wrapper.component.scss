@@ -1,12 +1,13 @@
 .wrapper {
+  background: #2C3643;
+  max-width: 75rem;
   overflow-y: auto;
   height: 100%;
   width: 100%;
-  padding: 2rem 0;
 
   ul {
     margin: 0;
-    padding: 0;
+    padding: 2rem 0;
   }
   li {
     list-style: none;
@@ -17,16 +18,22 @@
 .native {
   .wrapper {
     &-list {
-      width: 75rem;
-      max-width: 100%;
+      width: 100%;
+
       column-rule: 1px solid #696969;
-      column-count: 2;
-      column-width: 25rem;
+      column-count: 1;
       column-fill: auto;
+      column-gap: 0;
       word-break: keep-all;
       overflow-wrap: normal;
+
+      @media(min-width: 760px) {
+        column-count: 2;
+      }
     }
     &-item {
+      width: 37rem;
+
       -webkit-column-break-inside: avoid; /* Chrome, Safari, Opera */
       page-break-inside: avoid; /* Firefox */
       break-inside: avoid; /* IE 10+ */
@@ -44,12 +51,11 @@
     }
 
     &-item {
-      flex: 1 1 100%;
-      min-width: 20rem;
+      flex: 0 0 37rem;
 
-      @media(min-width: 480px) {
-        flex: 1 1 49%;
+      @media(min-width: 760px) {
         &:nth-child(odd) {
+          margin-right: -1px;
           border-right: solid 1px #696969;
         }
       }
@@ -65,19 +71,21 @@
 .alt {
   .wrapper {
     &-list {
-      width: 75rem;
+      width: 100%;
     }
     &-item {
-      float: left;
-      width: 49%;
-      border-right: solid 1px transparent;
+      width: 37rem;
 
-      &:nth-child(even) {
-        margin-right: 0;
-      }
+      @media(min-width: 760px) {
+        float: left;
+        &:nth-child(even) {
+          margin-right: 0;
+        }
 
-      &:nth-child(odd) {
-        border-color: #696969;
+        &:nth-child(odd) {
+          margin-right: -1px;
+          border-right: solid 1px #696969;
+        }
       }
     }
   }

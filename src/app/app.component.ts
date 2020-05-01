@@ -15,7 +15,7 @@ import { ColumnType } from './column.enum';
 })
 export class AppComponent {
   listForm = this.fb.group({
-    length: [6],
+    length: [25],
   });
 
   listLength$ = this.listForm.get('length')

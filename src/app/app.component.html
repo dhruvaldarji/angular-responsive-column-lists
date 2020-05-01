@@ -1,15 +1,10 @@
 <div class="app">
   <div class="header">
     <h1>Responsive Column Lists!</h1>
-    <p>
-      Update the <strong>Items Input</strong> below to change the number of items.
-    </p>
-    <p>
-      Select <strong>Column Styles</strong> below to swap between different implementations of columns. 
-    </p>
-    <p>
-      Click on <strong>Home</strong> or the menu items to navigate to different <strong>routes</strong>.
-    </p>
+    <p>Update the <strong>Items Input</strong> below to change the number of items.</p>
+    <p>Select <strong>Column Styles</strong> below to swap between different implementations of columns. </p>
+    <p>Click on <strong>Home</strong> or the menu items to navigate to different <strong>routes</strong>.</p>
+    <p>Resize the screen to test responsive views.</p>
     <hr/>
     <div *ngIf="listForm">
       <form class="form" [formGroup]="listForm">
@@ -41,34 +36,35 @@
     <hr/>
   </div>
   <div class="body">
-    <div>
-      <h2>List</h2>
-      <div>
-        <h3>Column Style</h3>
-        <div class="app__btn-group" *ngIf="columnType$ | async as columnType">
-          <button
-            class="app-btn"
-            [class.app-btn--active]="columnType === 'native'"
-            (click)="changeColumnType('native')"
-            >
-            native (default)
-          </button>
-          <button
-            class="app-btn"
-            [class.app-btn--active]="columnType === 'flex'"
-            (click)="changeColumnType('flex')"
-            >
-            flex (best)
-          </button>
-          <button
-            class="app-btn"
-            [class.app-btn--active]="columnType === 'alt'"
-            (click)="changeColumnType('alt')"
-            >
-            alt (jank)
-          </button>
-        </div>
+    <h2 class="body-title">List</h2>
+    <div class="body-controls">
+      <h3 class="body-static">Column Style</h3>
+      <div class="body__btn-group" *ngIf="columnType$ | async as columnType">
+        <button
+          class="body-btn"
+          [class.body-btn--active]="columnType === 'native'"
+          (click)="changeColumnType('native')"
+          >
+          native (default)
+        </button>
+        <button
+          class="body-btn"
+          [class.body-btn--active]="columnType === 'flex'"
+          (click)="changeColumnType('flex')"
+          >
+          flex (best)
+        </button>
+        <button
+          class="body-btn"
+          [class.body-btn--active]="columnType === 'alt'"
+          (click)="changeColumnType('alt')"
+          >
+          alt (jank)
+        </button>
       </div>
+      <hr/>
+    </div>
+    <div class="body-content">
       <app-wrapper [list]="list$ | async" [columnType]="columnType$ | async"></app-wrapper>
     </div>
   </div>

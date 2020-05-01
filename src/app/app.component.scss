@@ -1,5 +1,5 @@
 hr {
-  margin: 1.5rem 0;
+  margin: 0;
 }
 
 .app {
@@ -7,6 +7,39 @@ hr {
   flex-flow: column nowrap;
   height: 100%;
   padding: 1rem;
+}
+
+.header {
+  flex: 0 0 20%;
+}
+
+.body {
+  display: flex;
+  flex-flow: column nowrap;
+  flex: 1 1 70%;
+  overflow: hidden;
+
+  &-content {
+    background: rgba(0,0,0,0.5);
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  &-title {
+    flex: 0 0 3rem;
+  }
+
+  &-controls {
+    flex: 0 0 12rem;
+  }
+
+  &-static {
+    flex: 0 0 auto;
+  }
+
+  &-grow {
+    flex: 1 1 auto;
+  }
 
   &__btn-group {
     padding: 1rem;
@@ -14,12 +47,10 @@ hr {
     flex-flow: row wrap;
     justify-content: space-between;
     align-items: center;
-    border-bottom: solid 1px #696969;
 
     @media(min-width: 480px) {
       flex-flow: row nowrap;
     }
-
   }
 
   &-btn {
@@ -63,21 +94,12 @@ hr {
   }
 }
 
-.header {
-  flex: 0 0 auto;
-}
-
-.body {
-  height: 100%;
-  flex: 1 1 auto;
-  overflow-y: auto;
-}
-
 .footer {
-  flex: 0 0 5rem;
+  flex: 0 0 10%;
 }
 
 .form {
+  margin: 1.5rem 0;
   
   &-group {
     display: flex;
