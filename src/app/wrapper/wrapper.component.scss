@@ -32,7 +32,11 @@
       }
     }
     &-item {
-      width: 37rem;
+      width: 100%;
+
+      @media(min-width: 760px) {
+        width: 37rem;
+      }
 
       -webkit-column-break-inside: avoid; /* Chrome, Safari, Opera */
       page-break-inside: avoid; /* Firefox */
@@ -51,9 +55,10 @@
     }
 
     &-item {
-      flex: 0 0 37rem;
+      flex: 0 0 100%;
 
       @media(min-width: 760px) {
+        flex: 0 0 37rem;
         &:nth-child(odd) {
           margin-right: -1px;
           border-right: solid 1px #696969;
@@ -74,7 +79,11 @@
       width: 100%;
     }
     &-item {
-      width: 37rem;
+      width: 100%;
+
+      @media(min-width: 760px) {
+        width: 37rem;
+      }
 
       @media(min-width: 760px) {
         float: left;
