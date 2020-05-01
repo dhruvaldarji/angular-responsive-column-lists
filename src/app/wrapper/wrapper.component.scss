@@ -1,14 +1,13 @@
 .wrapper {
   background: #2C3643;
-  max-width: 73rem;
   padding-right: 2rem;
   overflow-y: auto;
   height: 100%;
-  width: 100%;
+  max-width: 73rem;
 
   ul {
     margin: 0;
-    padding: 2rem 0;
+    padding: 2rem 2rem 2rem 0;
   }
   li {
     list-style: none;
@@ -56,7 +55,7 @@
     }
 
     &-item {
-      flex: 0 0 100%;
+      flex: 1 1 100%;
 
       @media(min-width: 760px) {
         flex: 0 0 36rem;

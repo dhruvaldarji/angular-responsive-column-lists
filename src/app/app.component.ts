@@ -26,6 +26,8 @@ export class AppComponent {
 
   columnType$ = new BehaviorSubject<ColumnType>(ColumnType.flex);
 
+  blankItems$ = new BehaviorSubject((new Array(500)).fill(null));
+
   constructor(private fb: FormBuilder) {}
 
   changeColumnType(ct: ColumnType) {

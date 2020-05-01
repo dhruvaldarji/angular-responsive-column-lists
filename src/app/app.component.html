@@ -65,7 +65,21 @@
       <hr/>
     </div>
     <div class="body-content">
-      <app-wrapper [list]="list$ | async" [columnType]="columnType$ | async"></app-wrapper>
+      <div class="body-content-hidden">
+        <ul class="body-content-hidden__list body-content-hidden__list--header">
+          <li *ngFor="let item of blankItems$ | async" class="body-content-hidden__item">
+            <span class="body-badge"></span>
+          </li>
+        </ul>
+        <ul class="body-content-hidden__list">
+          <li *ngFor="let item of blankItems$ | async" class="body-content-hidden__item">
+            <span class="body-badge"></span>
+          </li>
+        </ul>
+      </div>
+      <div class="body-content-wrapper">
+        <app-wrapper [list]="list$ | async" [columnType]="columnType$ | async"></app-wrapper>
+      </div>
     </div>
   </div>
   <div class="footer">
